@@ -1,5 +1,8 @@
 package headfirst.designpatterns.strategy;
 
+/**
+ * 飞行行为
+ */
 public interface FlyBehavior {
-    public void fly();
+    void fly();
 }

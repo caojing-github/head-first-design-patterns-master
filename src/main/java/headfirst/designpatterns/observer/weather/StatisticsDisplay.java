@@ -1,5 +1,8 @@
 package headfirst.designpatterns.observer.weather;
 
+/**
+ * 统计布告板
+ */
 public class StatisticsDisplay implements Observer, DisplayElement {
     private float maxTemp = 0.0f;
     private float minTemp = 200;
@@ -12,6 +15,7 @@ public class StatisticsDisplay implements Observer, DisplayElement {
         weatherData.registerObserver(this);
     }
 
+    @Override
     public void update(float temp, float humidity, float pressure) {
         tempSum += temp;
         numReadings++;
@@ -27,8 +31,8 @@ public class StatisticsDisplay implements Observer, DisplayElement {
         display();
     }
 
+    @Override
     public void display() {
-        System.out.println("Avg/Max/Min temperature = " + (tempSum / numReadings)
-            + "/" + maxTemp + "/" + minTemp);
+        System.out.println("Avg/Max/Min temperature = " + (tempSum / numReadings) + "/" + maxTemp + "/" + minTemp);
     }
 }

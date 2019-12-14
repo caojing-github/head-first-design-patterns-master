@@ -1,5 +1,8 @@
 package headfirst.designpatterns.strategy;
 
+/**
+ * 红头鸭
+ */
 public class RedHeadDuck extends Duck {
 
     public RedHeadDuck() {
@@ -7,6 +10,7 @@ public class RedHeadDuck extends Duck {
         quackBehavior = new Quack();
     }
 
+    @Override
     public void display() {
         System.out.println("I'm a real Red Headed duck");
     }

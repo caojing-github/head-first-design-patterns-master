@@ -1,5 +1,8 @@
 package headfirst.designpatterns.observer.weather;
 
+/**
+ * 酷热指数布告板
+ */
 public class HeatIndexDisplay implements Observer, DisplayElement {
     float heatIndex = 0.0f;
     private WeatherData weatherData;
@@ -9,11 +12,19 @@ public class HeatIndexDisplay implements Observer, DisplayElement {
         weatherData.registerObserver(this);
     }
 
+    @Override
     public void update(float t, float rh, float pressure) {
         heatIndex = computeHeatIndex(t, rh);
         display();
     }
 
+    /**
+     * 计算酷热指数
+     *
+     * @param t  温度
+     * @param rh 湿度
+     * @return float
+     */
     private float computeHeatIndex(float t, float rh) {
         float index = (float) ((16.923 + (0.185212 * t) + (5.37941 * rh) - (0.100254 * t * rh)
             + (0.00941695 * (t * t)) + (0.00728898 * (rh * rh))
@@ -26,6 +37,7 @@ public class HeatIndexDisplay implements Observer, DisplayElement {
         return index;
     }
 
+    @Override
     public void display() {
         System.out.println("Heat index is " + heatIndex);
     }

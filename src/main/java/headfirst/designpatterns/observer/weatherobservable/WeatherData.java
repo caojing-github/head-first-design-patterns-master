@@ -2,6 +2,9 @@ package headfirst.designpatterns.observer.weatherobservable;
 
 import java.util.Observable;
 
+/**
+ * 使用java内置的观察者模式实现"追踪来自气象站的数据，并更新布告板"
+ */
 public class WeatherData extends Observable {
     private float temperature;
     private float humidity;
@@ -11,7 +14,9 @@ public class WeatherData extends Observable {
     }
 
     public void measurementsChanged() {
+        // 标记状态已经改变
         setChanged();
+        // 通知观察者，另一个方法notifyObservers(Object arg)传送任何数据给每一个观察者
         notifyObservers();
     }
 

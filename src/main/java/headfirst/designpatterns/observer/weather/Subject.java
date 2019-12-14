@@ -1,9 +1,22 @@
 package headfirst.designpatterns.observer.weather;
 
+/**
+ * 主题
+ */
 public interface Subject {
-    public void registerObserver(Observer o);
 
-    public void removeObserver(Observer o);
+    /**
+     * 注册观察者
+     */
+    void registerObserver(Observer o);
 
-    public void notifyObservers();
+    /**
+     * 观察者取消注册
+     */
+    void removeObserver(Observer o);
+
+    /**
+     * 通知观察者
+     */
+    void notifyObservers();
 }

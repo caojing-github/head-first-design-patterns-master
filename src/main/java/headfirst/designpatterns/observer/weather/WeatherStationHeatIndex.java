@@ -1,5 +1,8 @@
 package headfirst.designpatterns.observer.weather;
 
+/**
+ * 气象站（含有酷热指数）
+ */
 public class WeatherStationHeatIndex {
 
     public static void main(String[] args) {

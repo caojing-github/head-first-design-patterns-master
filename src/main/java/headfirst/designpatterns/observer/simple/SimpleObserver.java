@@ -9,6 +9,7 @@ public class SimpleObserver implements Observer {
         simpleSubject.registerObserver(this);
     }
 
+    @Override
     public void update(int value) {
         this.value = value;
         display();

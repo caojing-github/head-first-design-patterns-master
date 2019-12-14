@@ -1,5 +1,8 @@
 package headfirst.designpatterns.strategy;
 
+/**
+ * 橡皮鸭
+ */
 public class RubberDuck extends Duck {
 
     public RubberDuck() {
@@ -13,6 +16,7 @@ public class RubberDuck extends Duck {
         this.quackBehavior = quackBehavior;
     }
 
+    @Override
     public void display() {
         System.out.println("I'm a rubber duckie");
     }
