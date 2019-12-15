@@ -1,9 +1,28 @@
 package headfirst.designpatterns.decorator.starbuzzWithSizes;
 
 public abstract class Beverage {
-    public enum Size {TALL, GRANDE, VENTI}
 
-    ;
+    /**
+     * 咖啡容量大小
+     */
+    public enum Size {
+
+        /**
+         * 小杯
+         */
+        TALL,
+
+        /**
+         * 中杯
+         */
+        GRANDE,
+
+        /**
+         * 大杯
+         */
+        VENTI
+    }
+
     Size size = Size.TALL;
     String description = "Unknown Beverage";
 
