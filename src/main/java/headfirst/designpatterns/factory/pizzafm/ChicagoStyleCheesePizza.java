@@ -1,5 +1,8 @@
 package headfirst.designpatterns.factory.pizzafm;
 
+/**
+ * 芝加哥风味比萨
+ */
 public class ChicagoStyleCheesePizza extends Pizza {
 
     public ChicagoStyleCheesePizza() {
@@ -10,6 +13,7 @@ public class ChicagoStyleCheesePizza extends Pizza {
         toppings.add("Shredded Mozzarella Cheese");
     }
 
+    @Override
     void cut() {
         System.out.println("Cutting the pizza into square slices");
     }

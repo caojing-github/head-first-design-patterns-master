@@ -1,5 +1,7 @@
 package headfirst.designpatterns.factory.pizzaaf;
 
 public interface Clams {
-    public String toString();
+
+    @Override
+    String toString();
 }

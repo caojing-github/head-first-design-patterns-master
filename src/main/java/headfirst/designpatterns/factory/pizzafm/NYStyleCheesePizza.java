@@ -1,5 +1,8 @@
 package headfirst.designpatterns.factory.pizzafm;
 
+/**
+ * 纽约风味芝士比萨
+ */
 public class NYStyleCheesePizza extends Pizza {
 
     public NYStyleCheesePizza() {

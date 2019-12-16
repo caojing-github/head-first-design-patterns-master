@@ -1,17 +1,20 @@
 package headfirst.designpatterns.factory.pizzaaf;
 
+/**
+ * 原料工厂
+ */
 public interface PizzaIngredientFactory {
 
-    public Dough createDough();
+    Dough createDough();
 
-    public Sauce createSauce();
+    Sauce createSauce();
 
-    public Cheese createCheese();
+    Cheese createCheese();
 
-    public Veggies[] createVeggies();
+    Veggies[] createVeggies();
 
-    public Pepperoni createPepperoni();
+    Pepperoni createPepperoni();
 
-    public Clams createClam();
+    Clams createClam();
 
 }

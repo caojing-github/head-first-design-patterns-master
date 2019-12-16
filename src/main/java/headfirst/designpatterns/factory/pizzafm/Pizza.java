@@ -3,10 +3,26 @@ package headfirst.designpatterns.factory.pizzafm;
 import java.util.ArrayList;
 
 public abstract class Pizza {
+
+    /**
+     * 名称
+     */
     String name;
+
+    /**
+     * 面团类型
+     */
     String dough;
+
+    /**
+     * 酱料类型
+     */
     String sauce;
-    ArrayList<String> toppings = new ArrayList<String>();
+
+    /**
+     * 一套佐料
+     */
+    ArrayList<String> toppings = new ArrayList<>();
 
     void prepare() {
         System.out.println("Prepare " + name);
@@ -34,6 +50,7 @@ public abstract class Pizza {
         return name;
     }
 
+    @Override
     public String toString() {
         StringBuffer display = new StringBuffer();
         display.append("---- " + name + " ----\n");

@@ -6,7 +6,7 @@ abstract public class Pizza {
     String name;
     String dough;
     String sauce;
-    ArrayList<String> toppings = new ArrayList<String>();
+    ArrayList<String> toppings = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -28,6 +28,7 @@ abstract public class Pizza {
         System.out.println("Boxing " + name);
     }
 
+    @Override
     public String toString() {
         // code to display pizza name and ingredients
         StringBuffer display = new StringBuffer();

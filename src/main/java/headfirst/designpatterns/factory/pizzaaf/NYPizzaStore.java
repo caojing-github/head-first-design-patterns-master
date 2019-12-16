@@ -2,10 +2,10 @@ package headfirst.designpatterns.factory.pizzaaf;
 
 public class NYPizzaStore extends PizzaStore {
 
+    @Override
     protected Pizza createPizza(String item) {
         Pizza pizza = null;
-        PizzaIngredientFactory ingredientFactory =
-            new NYPizzaIngredientFactory();
+        PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
 
         if (item.equals("cheese")) {
 

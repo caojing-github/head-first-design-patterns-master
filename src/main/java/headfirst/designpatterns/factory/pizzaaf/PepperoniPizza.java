@@ -7,6 +7,7 @@ public class PepperoniPizza extends Pizza {
         this.ingredientFactory = ingredientFactory;
     }
 
+    @Override
     void prepare() {
         System.out.println("Preparing " + name);
         dough = ingredientFactory.createDough();

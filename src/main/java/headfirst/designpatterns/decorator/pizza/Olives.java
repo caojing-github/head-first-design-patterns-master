@@ -7,10 +7,12 @@ public class Olives extends ToppingDecorator {
         this.pizza = pizza;
     }
 
+    @Override
     public String getDescription() {
         return pizza.getDescription() + ", Olives";
     }
 
+    @Override
     public double cost() {
         return pizza.cost() + .30;
     }
