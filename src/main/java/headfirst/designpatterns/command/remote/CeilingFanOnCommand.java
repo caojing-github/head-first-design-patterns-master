@@ -7,6 +7,7 @@ public class CeilingFanOnCommand implements Command {
         this.ceilingFan = ceilingFan;
     }
 
+    @Override
     public void execute() {
         ceilingFan.high();
     }

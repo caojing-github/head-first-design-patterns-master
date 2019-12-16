@@ -8,11 +8,13 @@ public class CeilingFanMediumCommand implements Command {
         this.ceilingFan = ceilingFan;
     }
 
+    @Override
     public void execute() {
         prevSpeed = ceilingFan.getSpeed();
         ceilingFan.medium();
     }
 
+    @Override
     public void undo() {
         switch (prevSpeed) {
             case CeilingFan.HIGH:

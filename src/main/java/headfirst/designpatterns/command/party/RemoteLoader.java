@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.party;
 
+/**
+ * 测试遥控器
+ */
 public class RemoteLoader {
 
     public static void main(String[] args) {
@@ -29,8 +32,10 @@ public class RemoteLoader {
         remoteControl.setCommand(0, partyOnMacro, partyOffMacro);
 
         System.out.println(remoteControl);
+
         System.out.println("--- Pushing Macro On---");
         remoteControl.onButtonWasPushed(0);
+
         System.out.println("--- Pushing Macro Off---");
         remoteControl.offButtonWasPushed(0);
     }

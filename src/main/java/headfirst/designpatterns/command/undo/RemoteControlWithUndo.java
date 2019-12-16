@@ -1,8 +1,8 @@
 package headfirst.designpatterns.command.undo;
 
-//
-// This is the invoker
-//
+/**
+ * 遥控器（调用者）
+ */
 public class RemoteControlWithUndo {
     Command[] onCommands;
     Command[] offCommands;
@@ -39,12 +39,12 @@ public class RemoteControlWithUndo {
         undoCommand.undo();
     }
 
+    @Override
     public String toString() {
         StringBuffer stringBuff = new StringBuffer();
         stringBuff.append("\n------ Remote Control -------\n");
         for (int i = 0; i < onCommands.length; i++) {
-            stringBuff.append("[slot " + i + "] " + onCommands[i].getClass().getName()
-                + "    " + offCommands[i].getClass().getName() + "\n");
+            stringBuff.append("[slot " + i + "] " + onCommands[i].getClass().getName() + "    " + offCommands[i].getClass().getName() + "\n");
         }
         stringBuff.append("[undo] " + undoCommand.getClass().getName() + "\n");
         return stringBuff.toString();

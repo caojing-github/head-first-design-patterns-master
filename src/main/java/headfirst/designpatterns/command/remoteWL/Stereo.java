@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.remoteWL;
 
+/**
+ * 音响
+ */
 public class Stereo {
     String location;
 

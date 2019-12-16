@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.undo;
 
+/**
+ * 吊扇
+ */
 public class CeilingFanLowCommand implements Command {
     CeilingFan ceilingFan;
     int prevSpeed;
@@ -8,11 +11,13 @@ public class CeilingFanLowCommand implements Command {
         this.ceilingFan = ceilingFan;
     }
 
+    @Override
     public void execute() {
         prevSpeed = ceilingFan.getSpeed();
         ceilingFan.low();
     }
 
+    @Override
     public void undo() {
         if (prevSpeed == CeilingFan.HIGH) {
             ceilingFan.high();

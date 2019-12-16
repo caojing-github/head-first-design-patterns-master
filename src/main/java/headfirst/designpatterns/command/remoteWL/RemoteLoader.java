@@ -1,14 +1,20 @@
 package headfirst.designpatterns.command.remoteWL;
 
+/**
+ * 测试遥控器
+ */
 public class RemoteLoader {
 
     public static void main(String[] args) {
         RemoteControl remoteControl = new RemoteControl();
-
+        // 灯
         Light livingRoomLight = new Light("Living Room");
         Light kitchenLight = new Light("Kitchen");
+        // 吊扇
         CeilingFan ceilingFan = new CeilingFan("Living Room");
+        // 车库门
         GarageDoor garageDoor = new GarageDoor("Main house");
+        // 音响
         Stereo stereo = new Stereo("Living Room");
 
         remoteControl.setCommand(0, livingRoomLight::on, livingRoomLight::off);

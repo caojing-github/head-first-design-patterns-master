@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.simpleremoteWL;
 
+/**
+ * 灯（接受者）
+ */
 public class Light {
 
     public Light() {

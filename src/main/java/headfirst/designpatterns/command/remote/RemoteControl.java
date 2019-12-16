@@ -1,8 +1,8 @@
 package headfirst.designpatterns.command.remote;
 
-//
-// This is the invoker
-//
+/**
+ * 遥控器（调用者）
+ */
 public class RemoteControl {
     Command[] onCommands;
     Command[] offCommands;
@@ -31,6 +31,7 @@ public class RemoteControl {
         offCommands[slot].execute();
     }
 
+    @Override
     public String toString() {
         StringBuffer stringBuff = new StringBuffer();
         stringBuff.append("\n------ Remote Control -------\n");

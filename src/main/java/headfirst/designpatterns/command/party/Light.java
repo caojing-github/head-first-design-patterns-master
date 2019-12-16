@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.party;
 
+/**
+ * 灯（接受者）
+ */
 public class Light {
     String location;
     int level;

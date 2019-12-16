@@ -8,11 +8,13 @@ public class LightOnCommand implements Command {
         this.light = light;
     }
 
+    @Override
     public void execute() {
         level = light.getLevel();
         light.on();
     }
 
+    @Override
     public void undo() {
         light.dim(level);
     }

@@ -1,7 +1,7 @@
 package headfirst.designpatterns.command.undo;
 
 public interface Command {
-    public void execute();
+    void execute();
 
-    public void undo();
+    void undo();
 }

@@ -7,10 +7,12 @@ public class StereoOffCommand implements Command {
         this.stereo = stereo;
     }
 
+    @Override
     public void execute() {
         stereo.off();
     }
 
+    @Override
     public void undo() {
         stereo.on();
     }

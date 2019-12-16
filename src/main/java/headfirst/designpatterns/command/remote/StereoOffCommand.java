@@ -7,6 +7,7 @@ public class StereoOffCommand implements Command {
         this.stereo = stereo;
     }
 
+    @Override
     public void execute() {
         stereo.off();
     }

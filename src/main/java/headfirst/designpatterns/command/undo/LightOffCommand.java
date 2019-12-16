@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.undo;
 
+/**
+ * 关灯（命令对象）
+ */
 public class LightOffCommand implements Command {
     Light light;
     int level;
@@ -8,11 +11,13 @@ public class LightOffCommand implements Command {
         this.light = light;
     }
 
+    @Override
     public void execute() {
         level = light.getLevel();
         light.off();
     }
 
+    @Override
     public void undo() {
         light.dim(level);
     }

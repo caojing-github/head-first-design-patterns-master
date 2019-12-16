@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.remote;
 
+/**
+ * 灯（接受者）
+ */
 public class Light {
     String location = "";
 

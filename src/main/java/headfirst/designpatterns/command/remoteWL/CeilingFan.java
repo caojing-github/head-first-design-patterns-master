@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.remoteWL;
 
+/**
+ * 吊扇
+ */
 public class CeilingFan {
     String location = "";
     int level;

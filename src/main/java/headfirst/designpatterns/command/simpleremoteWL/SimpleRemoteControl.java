@@ -1,8 +1,8 @@
 package headfirst.designpatterns.command.simpleremoteWL;
 
-//
-// This is the invoker
-//
+/**
+ * 遥控器（调用者）
+ */
 public class SimpleRemoteControl {
     Command slot;
 

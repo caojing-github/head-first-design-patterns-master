@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.party;
 
+/**
+ * 热水器
+ */
 public class Hottub {
     boolean on;
     int temperature;

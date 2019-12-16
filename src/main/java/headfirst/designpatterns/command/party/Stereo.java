@@ -1,5 +1,8 @@
 package headfirst.designpatterns.command.party;
 
+/**
+ * 音响
+ */
 public class Stereo {
     String location;
 
