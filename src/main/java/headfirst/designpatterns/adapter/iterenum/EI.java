@@ -7,7 +7,7 @@ import java.util.Vector;
 
 public class EI {
     public static void main(String args[]) {
-        Vector<String> v = new Vector<String>(Arrays.asList(args));
+        Vector<String> v = new Vector<>(Arrays.asList(args));
         Enumeration<String> enumeration = v.elements();
         while (enumeration.hasMoreElements()) {
             System.out.println(enumeration.nextElement());

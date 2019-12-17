@@ -1,7 +1,7 @@
 package headfirst.designpatterns.adapter.ducks;
 
 public interface Duck {
-    public void quack();
+    void quack();
 
-    public void fly();
+    void fly();
 }
