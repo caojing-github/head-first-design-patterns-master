@@ -49,6 +49,7 @@ public class CdPlayer {
         System.out.println(description + " paused \"" + title + "\"");
     }
 
+    @Override
     public String toString() {
         return description;
     }

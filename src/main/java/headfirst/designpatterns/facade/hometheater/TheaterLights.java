@@ -19,6 +19,7 @@ public class TheaterLights {
         System.out.println(description + " dimming to " + level + "%");
     }
 
+    @Override
     public String toString() {
         return description;
     }
