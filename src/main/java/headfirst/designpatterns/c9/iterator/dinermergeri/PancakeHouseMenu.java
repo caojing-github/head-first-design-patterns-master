@@ -3,6 +3,9 @@ package headfirst.designpatterns.c9.iterator.dinermergeri;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * 煎饼屋菜单
+ */
 public class PancakeHouseMenu implements Menu {
     ArrayList<MenuItem> menuItems;
 
@@ -30,8 +33,7 @@ public class PancakeHouseMenu implements Menu {
             3.59);
     }
 
-    public void addItem(String name, String description,
-                        boolean vegetarian, double price) {
+    public void addItem(String name, String description, boolean vegetarian, double price) {
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
         menuItems.add(menuItem);
     }

@@ -12,10 +12,8 @@ public class Waitress {
         this.dinerMenu = dinerMenu;
     }
 
-    // --- added 12/30/2016 - not in original code
     public void printMenu(int withNewConstructs) {
         ArrayList<MenuItem> breakfastItems = ((PancakeHouseMenu) pancakeHouseMenu).getMenuItems();
-        //pMenu.forEach(m -> printMenuItem(m));
         for (MenuItem m : breakfastItems) {
             printMenuItem(m);
         }
@@ -31,7 +29,6 @@ public class Waitress {
         System.out.print(menuItem.getPrice() + " -- ");
         System.out.println(menuItem.getDescription());
     }
-    // ---
 
     public void printMenu() {
         Iterator<MenuItem> pancakeIterator = pancakeHouseMenu.createIterator();
@@ -70,7 +67,6 @@ public class Waitress {
         }
         return false;
     }
-
 
     private void printVegetarianMenu(Iterator<MenuItem> iterator) {
         while (iterator.hasNext()) {

@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+/**
+ * 咖啡厅的菜单
+ */
 public class CafeMenu implements Menu {
     HashMap<String, MenuItem> menuItems = new HashMap<String, MenuItem>();
 

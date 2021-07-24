@@ -2,6 +2,9 @@ package headfirst.designpatterns.c9.iterator.dinermergeri;
 
 import java.util.Iterator;
 
+/**
+ * 餐厅菜单
+ */
 public class DinerMenu implements Menu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;

@@ -2,6 +2,9 @@ package headfirst.designpatterns.c9.iterator.dinermerger;
 
 import java.util.ArrayList;
 
+/**
+ * 煎饼屋菜单迭代器
+ */
 public class PancakeHouseMenuIterator implements Iterator {
     ArrayList<MenuItem> items;
     int position = 0;
@@ -13,7 +16,7 @@ public class PancakeHouseMenuIterator implements Iterator {
     @Override
     public MenuItem next() {
         MenuItem item = items.get(position);
-        position = position + 1;
+        position++;
         return item;
     }
 
@@ -21,8 +24,7 @@ public class PancakeHouseMenuIterator implements Iterator {
     public boolean hasNext() {
         if (position >= items.size()) {
             return false;
-        } else {
-            return true;
         }
+        return true;
     }
 }

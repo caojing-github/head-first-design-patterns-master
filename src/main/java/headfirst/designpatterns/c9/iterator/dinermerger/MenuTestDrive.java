@@ -2,22 +2,22 @@ package headfirst.designpatterns.c9.iterator.dinermerger;
 
 import java.util.ArrayList;
 
+/**
+ * 测试代码
+ */
+@SuppressWarnings("all")
 public class MenuTestDrive {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
         DinerMenu dinerMenu = new DinerMenu();
-
         Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu);
-
         // 不使用迭代器
         printMenu();
-
         //  使用迭代器
         waitress.printMenu();
-
     }
 
-    /*
+    /**
      * Without the Waitress, we need the code below...
      */
     public static void printMenu() {

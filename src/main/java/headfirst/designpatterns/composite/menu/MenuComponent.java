@@ -1,5 +1,8 @@
 package headfirst.designpatterns.composite.menu;
 
+/**
+ * 菜单组件
+ */
 public abstract class MenuComponent {
 
     public void add(MenuComponent menuComponent) {

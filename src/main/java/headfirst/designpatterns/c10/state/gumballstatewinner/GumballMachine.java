@@ -9,7 +9,7 @@ public class GumballMachine {
     State winnerState;
 
     State state = soldOutState;
-    int count = 0;
+    int count;
 
     public GumballMachine(int numberGumballs) {
         soldOutState = new SoldOutState(this);
@@ -82,6 +82,7 @@ public class GumballMachine {
         return winnerState;
     }
 
+    @Override
     public String toString() {
         StringBuffer result = new StringBuffer();
         result.append("\nMighty Gumball, Inc.");

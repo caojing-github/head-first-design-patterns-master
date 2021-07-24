@@ -2,6 +2,9 @@ package headfirst.designpatterns.c9.iterator.dinermergercafe;
 
 import java.util.Iterator;
 
+/**
+ * 女招待
+ */
 public class Waitress {
     Menu pancakeHouseMenu;
     Menu dinerMenu;

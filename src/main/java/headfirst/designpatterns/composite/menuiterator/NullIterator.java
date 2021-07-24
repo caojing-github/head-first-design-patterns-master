@@ -2,12 +2,17 @@ package headfirst.designpatterns.composite.menuiterator;
 
 import java.util.Iterator;
 
+/**
+ * 空迭代器
+ */
 public class NullIterator implements Iterator<MenuComponent> {
 
+    @Override
     public MenuComponent next() {
         return null;
     }
 
+    @Override
     public boolean hasNext() {
         return false;
     }

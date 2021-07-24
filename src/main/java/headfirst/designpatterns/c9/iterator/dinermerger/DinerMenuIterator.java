@@ -1,5 +1,8 @@
 package headfirst.designpatterns.c9.iterator.dinermerger;
 
+/**
+ * 餐厅菜单迭代器
+ */
 public class DinerMenuIterator implements Iterator {
     MenuItem[] items;
     int position = 0;
@@ -11,7 +14,7 @@ public class DinerMenuIterator implements Iterator {
     @Override
     public MenuItem next() {
         MenuItem menuItem = items[position];
-        position = position + 1;
+        position++;
         return menuItem;
     }
 
@@ -19,8 +22,7 @@ public class DinerMenuIterator implements Iterator {
     public boolean hasNext() {
         if (position >= items.length || items[position] == null) {
             return false;
-        } else {
-            return true;
         }
+        return true;
     }
 }

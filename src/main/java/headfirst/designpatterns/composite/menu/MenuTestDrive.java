@@ -2,18 +2,11 @@ package headfirst.designpatterns.composite.menu;
 
 public class MenuTestDrive {
     public static void main(String args[]) {
-        MenuComponent pancakeHouseMenu =
-            new Menu("PANCAKE HOUSE MENU", "Breakfast");
-        MenuComponent dinerMenu =
-            new Menu("DINER MENU", "Lunch");
-        MenuComponent cafeMenu =
-            new Menu("CAFE MENU", "Dinner");
-        MenuComponent dessertMenu =
-            new Menu("DESSERT MENU", "Dessert of course!");
-        MenuComponent coffeeMenu = new Menu("COFFEE MENU", "Stuff to go with your afternoon coffee");
+        MenuComponent pancakeHouseMenu = new Menu("PANCAKE HOUSE MENU", "Breakfast");
+        MenuComponent dinerMenu = new Menu("DINER MENU", "Lunch");
+        MenuComponent cafeMenu = new Menu("CAFE MENU", "Dinner");
 
         MenuComponent allMenus = new Menu("ALL MENUS", "All menus combined");
-
         allMenus.add(pancakeHouseMenu);
         allMenus.add(dinerMenu);
         allMenus.add(cafeMenu);
@@ -71,6 +64,7 @@ public class MenuTestDrive {
             true,
             3.89));
 
+        MenuComponent dessertMenu = new Menu("DESSERT MENU", "Dessert of course!");
         dinerMenu.add(dessertMenu);
 
         dessertMenu.add(new MenuItem(
@@ -106,6 +100,7 @@ public class MenuTestDrive {
             true,
             4.29));
 
+        MenuComponent coffeeMenu = new Menu("COFFEE MENU", "Stuff to go with your afternoon coffee");
         cafeMenu.add(coffeeMenu);
 
         coffeeMenu.add(new MenuItem(
@@ -125,7 +120,6 @@ public class MenuTestDrive {
             0.89));
 
         Waitress waitress = new Waitress(allMenus);
-
         waitress.printMenu();
     }
 }

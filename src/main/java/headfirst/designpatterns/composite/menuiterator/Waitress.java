@@ -3,6 +3,7 @@ package headfirst.designpatterns.composite.menuiterator;
 import java.util.Iterator;
 
 public class Waitress {
+
     MenuComponent allMenus;
 
     public Waitress(MenuComponent allMenus) {

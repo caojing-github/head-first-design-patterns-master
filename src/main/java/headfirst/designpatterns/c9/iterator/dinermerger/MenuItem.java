@@ -1,5 +1,8 @@
 package headfirst.designpatterns.c9.iterator.dinermerger;
 
+/**
+ * 菜单项
+ */
 public class MenuItem {
 
     /**
@@ -22,10 +25,7 @@ public class MenuItem {
      */
     double price;
 
-    public MenuItem(String name,
-                    String description,
-                    boolean vegetarian,
-                    double price) {
+    public MenuItem(String name, String description, boolean vegetarian, double price) {
         this.name = name;
         this.description = description;
         this.vegetarian = vegetarian;

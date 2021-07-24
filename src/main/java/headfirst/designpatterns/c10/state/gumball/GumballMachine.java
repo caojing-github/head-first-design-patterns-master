@@ -1,13 +1,38 @@
 package headfirst.designpatterns.c10.state.gumball;
 
+/**
+ * 糖果机
+ */
 public class GumballMachine {
 
+    /**
+     * 糖果售罄
+     */
     final static int SOLD_OUT = 0;
+
+    /**
+     * 没有25分钱
+     */
     final static int NO_QUARTER = 1;
+
+    /**
+     * 有25分钱
+     */
     final static int HAS_QUARTER = 2;
+
+    /**
+     * 售出糖果
+     */
     final static int SOLD = 3;
 
+    /**
+     * 当前状态
+     */
     int state = SOLD_OUT;
+
+    /**
+     * 机器内糖果数目
+     */
     int count = 0;
 
     public GumballMachine(int count) {
@@ -17,6 +42,9 @@ public class GumballMachine {
         }
     }
 
+    /**
+     * 投入25分钱
+     */
     public void insertQuarter() {
         if (state == HAS_QUARTER) {
             System.out.println("You can't insert another quarter");
@@ -30,6 +58,9 @@ public class GumballMachine {
         }
     }
 
+    /**
+     * 退回25分钱
+     */
     public void ejectQuarter() {
         if (state == HAS_QUARTER) {
             System.out.println("Quarter returned");
@@ -43,6 +74,9 @@ public class GumballMachine {
         }
     }
 
+    /**
+     * 转动曲柄
+     */
     public void turnCrank() {
         if (state == SOLD) {
             System.out.println("Turning twice doesn't get you another gumball!");
@@ -57,6 +91,9 @@ public class GumballMachine {
         }
     }
 
+    /**
+     * 发放糖果
+     */
     private void dispense() {
         if (state == SOLD) {
             System.out.println("A gumball comes rolling out the slot");
@@ -76,11 +113,15 @@ public class GumballMachine {
         }
     }
 
+    /**
+     * 添加糖果
+     */
     public void refill(int numGumBalls) {
         this.count = numGumBalls;
         state = NO_QUARTER;
     }
 
+    @Override
     public String toString() {
         StringBuffer result = new StringBuffer();
         result.append("\nMighty Gumball, Inc.");

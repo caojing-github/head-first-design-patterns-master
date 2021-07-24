@@ -1,8 +1,9 @@
 package headfirst.designpatterns.c9.iterator.dinermerger;
 
 /**
- * 招待
+ * 女招待
  */
+@SuppressWarnings("all")
 public class Waitress {
 
     /**
@@ -20,6 +21,9 @@ public class Waitress {
         this.dinerMenu = dinerMenu;
     }
 
+    /**
+     * 打印出菜单每一项
+     */
     public void printMenu() {
         Iterator pancakeIterator = pancakeHouseMenu.createIterator();
         Iterator dinerIterator = dinerMenu.createIterator();
@@ -28,9 +32,11 @@ public class Waitress {
         printMenu(pancakeIterator);
         System.out.println("\nLUNCH");
         printMenu(dinerIterator);
-
     }
 
+    /**
+     * 打印出菜单每一项
+     */
     private void printMenu(Iterator iterator) {
         while (iterator.hasNext()) {
             MenuItem menuItem = iterator.next();
@@ -40,11 +46,17 @@ public class Waitress {
         }
     }
 
+    /**
+     * 打印所有的素食菜单项
+     */
     public void printVegetarianMenu() {
         printVegetarianMenu(pancakeHouseMenu.createIterator());
         printVegetarianMenu(dinerMenu.createIterator());
     }
 
+    /**
+     * 判断是否是素食
+     */
     public boolean isItemVegetarian(String name) {
         Iterator breakfastIterator = pancakeHouseMenu.createIterator();
         if (isVegetarian(name, breakfastIterator)) {
@@ -57,6 +69,9 @@ public class Waitress {
         return false;
     }
 
+    /**
+     * 打印所有的素食菜单项
+     */
     private void printVegetarianMenu(Iterator iterator) {
         while (iterator.hasNext()) {
             MenuItem menuItem = iterator.next();
@@ -68,6 +83,9 @@ public class Waitress {
         }
     }
 
+    /**
+     * 判断是否是素食
+     */
     private boolean isVegetarian(String name, Iterator iterator) {
         while (iterator.hasNext()) {
             MenuItem menuItem = iterator.next();

@@ -78,6 +78,7 @@ public class GumballMachine {
         return soldState;
     }
 
+    @Override
     public String toString() {
         StringBuffer result = new StringBuffer();
         result.append("\nMighty Gumball, Inc.");

@@ -27,17 +27,17 @@ public class DinerMenu implements Menu {
             true, 3.89);
     }
 
-    public void addItem(String name, String description,
-                        boolean vegetarian, double price) {
+    public void addItem(String name, String description, boolean vegetarian, double price) {
         MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
         if (numberOfItems >= MAX_ITEMS) {
             System.err.println("Sorry, menu is full!  Can't add item to menu");
         } else {
             menuItems[numberOfItems] = menuItem;
-            numberOfItems = numberOfItems + 1;
+            numberOfItems++;
         }
     }
 
+    @Deprecated
     public MenuItem[] getMenuItems() {
         return menuItems;
     }
